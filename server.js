@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import http from 'node:http';
 import { WebSocketServer } from 'ws';
-import { TriadicSystem, TRIADS, DIMENSIONS } from './src/core/index.js';
+import { TriadicSystem, TRIADS, VERTICES, PENTACHORAL_DIMENSIONS } from './src/core/index.js';
 
 /**
  * Cosmos System Interface — backend API server.
@@ -52,7 +52,12 @@ app.get('/api/system', (req, res) => {
 });
 
 app.get('/api/triads', (req, res) => {
-  res.json({ triads: TRIADS, dimensions: DIMENSIONS });
+  res.json({ triads: TRIADS, vertices: VERTICES, dimensions: PENTACHORAL_DIMENSIONS });
+});
+
+app.get('/api/pentachoron', (req, res) => {
+  const snap = system.snapshot();
+  res.json({ ...snap.pentachoron, cycle: snap.cycle });
 });
 
 app.get('/api/rn', (req, res) => {
@@ -110,6 +115,8 @@ app.get('/api/balance-sheet', (req, res) => {
 });
 
 app.post('/api/cycle', mutate((req) => system.processCycle(Number(req.body?.energy) || 1)));
+
+app.post('/api/step', mutate((req) => system.stepCycle(Number(req.body?.energy) || 1)));
 
 const PORT = Number(process.env.PORT) || 3001;
 server.listen(PORT, () => {
