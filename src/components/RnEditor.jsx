@@ -1,19 +1,18 @@
 import React, { useMemo, useState } from 'react';
 import classNames from 'classnames';
 import { useSystemStore } from '../store/systemStore.js';
-import { serviceId } from '../core/index.js';
+import { vertexServiceId } from '../core/index.js';
 
-function serviceOptions(triads) {
+function serviceOptions(vertices) {
   const options = [];
-  for (const triad of Object.values(triads)) {
-    for (const service of triad.services) {
+  for (const vertex of Object.values(vertices)) {
+    for (const service of vertex.services) {
       options.push({
-        value: serviceId(triad.id, service.code),
-        label: `${triad.name} ${service.code} (${service.name})`,
+        value: vertexServiceId(vertex, service),
+        label: `${vertex.name} ${service.code} (${service.name})`,
       });
     }
   }
-  options.push({ value: 'shared.P-5', label: 'Shared P-5 (Processing Core)' });
   return options;
 }
 
@@ -22,15 +21,26 @@ function serviceOptions(triads) {
  * countercurrent R1/R2 balance across a pivot service.
  */
 export default function RnEditor() {
-  const triads = useSystemStore((state) => state.triads);
+  const vertices = useSystemStore((state) => state.vertices);
   const rnFlows = useSystemStore((state) => state.snapshot.rnFlows);
+  const cells = useSystemStore((state) => state.snapshot.pentachoron.cells);
   const addRnFlow = useSystemStore((state) => state.addRnFlow);
   const removeRnFlow = useSystemStore((state) => state.removeRnFlow);
   const runRnForward = useSystemStore((state) => state.runRnForward);
   const runRnBackward = useSystemStore((state) => state.runRnBackward);
   const rebalanceRn = useSystemStore((state) => state.rebalanceRn);
 
-  const options = useMemo(() => serviceOptions(triads), [triads]);
+  const options = useMemo(() => serviceOptions(vertices), [vertices]);
+  const cellsByRn = useMemo(() => {
+    const map = new Map();
+    for (const cell of cells) {
+      for (const rnId of cell.rnIds) {
+        if (!map.has(rnId)) map.set(rnId, []);
+        map.get(rnId).push(cell.short);
+      }
+    }
+    return map;
+  }, [cells]);
 
   const [form, setForm] = useState({
     id: '',
@@ -103,10 +113,10 @@ export default function RnEditor() {
             </select>
           </label>
           <label>
-            Owning triad
+            Owning vertex
             <select value={form.triad} onChange={update('triad')}>
-              {Object.values(triads).map((t) => (
-                <option key={t.id} value={t.id}>{t.name}</option>
+              {Object.values(vertices).map((vertex) => (
+                <option key={vertex.id} value={vertex.id}>{vertex.label ?? vertex.name}</option>
               ))}
               <option value="cross">Cross-triad</option>
             </select>
@@ -132,6 +142,7 @@ export default function RnEditor() {
                 <th>E_R1</th>
                 <th>E_R2</th>
                 <th>Balance</th>
+                <th>Cells</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -151,6 +162,7 @@ export default function RnEditor() {
                       {rn.balanced ? 'balanced' : `Δ ${rn.imbalance.toFixed(2)}`}
                     </span>
                   </td>
+                  <td className="mono">{cellsByRn.get(rn.id)?.join(' ') ?? '—'}</td>
                   <td className="actions-cell">
                     <button className="btn btn-sm" onClick={() => runRnForward(rn.id)} title="Run R1 forward flow">
                       R1 →

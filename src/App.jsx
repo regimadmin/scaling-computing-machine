@@ -16,9 +16,12 @@ const VIEWS = [
 export default function App() {
   const [view, setView] = useState('dashboard');
   const processCycle = useSystemStore((state) => state.processCycle);
+  const stepPentachoralCycle = useSystemStore((state) => state.stepPentachoralCycle);
   const balanced = useSystemStore((state) => state.snapshot.balanced);
+  const cycle = useSystemStore((state) => state.snapshot.cycle);
 
   const ActiveView = VIEWS.find((v) => v.id === view)?.component ?? Dashboard;
+  const nextPhase = cycle.phases[cycle.phase];
 
   return (
     <div className="app">
@@ -33,6 +36,13 @@ export default function App() {
           </span>
           <button className="btn btn-primary" onClick={() => processCycle(1)}>
             ▶ Run [3-6-9] Cycle
+          </button>
+          <button
+            className="btn"
+            onClick={() => stepPentachoralCycle(1)}
+            title={nextPhase ? `Next: t≡${nextPhase.phase} — ${nextPhase.description}` : undefined}
+          >
+            ⬠ Step Pentachoral Cycle (t={cycle.step})
           </button>
         </div>
       </header>
