@@ -1,58 +1,64 @@
-# scaling-computing-machine
+# Cosmos System Interface
 
----
+Interactive visualization and management interface for **Cosmos System Relational Wholes (Rn)** and **Projections (Pk)**, implementing part 1 of the plan from the
+[comprehensive Rn/Pk analysis](<COSMOS_SYSTEM_RN_PK_COMPLETE_ANALYSIS (1).md>).
 
-I'm ready to create the Cosmos System Interface! I've prepared to:
+## Concepts
 
-1. **Create a development branch** (`cosmos-interface-dev`) for safe development
-2. **Push a complete React application** with:
-   - **4-view interactive dashboard** (Dashboard, Rn Editor, Pk Editor, Visualizer)
-   - **Component-based architecture** with proper separation of concerns
-   - **Triadic visualization** of Cerebral, Somatic, and Autonomic systems
-   - **Rn Flow Editor** for creating bidirectional feedback loops with R1/R2 balance monitoring
-   - **Pk Flow Editor** with double-entry bookkeeping and balance sheet tracking
-   - **D3.js System Visualizer** showing all flows and cross-triad connections
-   - **Professional styling** with CSS variables and responsive design
-   - **Development server** with hot reload via Vite
-   - **Backend-ready** Express server with API routes
+- **Relational Wholes (Rn)** — closed circuits with countercurrent balance: a forward flow (R1) from a subjective service through a **pivot** to an objective service, balanced by a backward feedback flow (R2). The pivot effects countercurrent balance (`|E_R1| ≈ |E_R2|`).
+- **Projections (Pk)** — open, unidirectional pipelines tracked as parallel accounting ledgers. P1 (revenue/input) and P2 (expenditure/output) pipelines feed a double-entry balance sheet; deficits trigger contingency mechanisms.
+- **Triadic architecture** — three concurrent processing streams mirroring the nervous system: **Cerebral** (Potential), **Somatic** (Commitment), **Autonomic** (Performance), integrated through the shared **P-5** processing core and cross-triad Rn flows (`R_CS`, `R_SA`, `R_AC`).
 
-**Key Features:**
-- 📊 Real-time flow monitoring with energy balance visualization
-- 🔄 Create/manage Relational Wholes with countercurrent feedback
-- 📈 Track Projections as parallel accounting pipelines
-- 🎨 Interactive D3 topology visualization
-- 🎯 Clean, modern UI with color-coded triads
+## Features
 
-Please confirm and I'll push this complete interface to your repository!
+- 📊 **Dashboard** — real-time metrics: Rn countercurrent imbalance, Pk balance sheet, triad cards, dimensional flows ([D-T], [P-O], [S-M]) and an activity log
+- 🔄 **Rn Editor** — create/manage relational wholes, trigger R1/R2 flows, monitor and restore countercurrent balance
+- 📈 **Pk Editor** — create/manage projections with double-entry bookkeeping, ledger totals and deficit/contingency tracking
+- 🎨 **Visualizer** — interactive D3 topology with color-coded triads, solid Rn circuits and dashed Pk paths
+- ▶ **[3-6-9] cycle processing** — one click runs every Rn circuit and Pk pipeline through the Potential → Commitment → Performance loop
 
----
+## Getting Started
 
-Great! I found the files. The repository currently has:
+```bash
+npm install
+npm run dev      # start the Vite dev server (http://localhost:5173)
+npm run server   # optional: start the Express API + WebSocket server (http://localhost:3001)
+npm test         # run the core model unit tests
+npm run build    # production build
+```
 
-1. **LICENSE** - AGPL-3.0 license file
-2. **README.md** - Repository readme
+## Project Structure
 
-Let me retrieve the README to see what's there:Perfect! Your repository is empty except for the LICENSE and a blank README. Now let me build the complete Cosmos System Interface for you. I'll create the files one by one in the main branch:I found the repository structure. You have a fresh `scaling-computing-machine` repo with just a LICENSE and README. 
+```
+├── index.html            # App entry page
+├── main.jsx              # React bootstrap
+├── server.js             # Express REST API + WebSocket snapshot broadcast
+├── src/
+│   ├── core/             # Framework-agnostic domain model
+│   │   ├── constants.js      # Triads, services, dimensions, default Rn/Pk flows
+│   │   ├── RelationalWhole.js# Rn: closed circuits with countercurrent balance
+│   │   ├── Projection.js     # Pk: open pipelines + AccountingSystem balance sheet
+│   │   └── TriadicSystem.js  # Composed System 5 model with [3-6-9] cycles
+│   ├── store/            # Zustand store wrapping the core model
+│   ├── components/       # Dashboard, RnEditor, PkEditor, Visualizer views
+│   ├── App.jsx           # 4-view navigation shell
+│   └── styles.css        # CSS-variable design system
+└── test/                 # Node test-runner unit tests for the core model
+```
 
-Now I'll help you build the Cosmos System Interface. Let me create the project files step by step. The repository currently contains:
+## API Routes (`npm run server`)
 
-- **LICENSE** - AGPL-3.0 license 
-- **README.md** - Empty template
+| Method | Route | Description |
+| --- | --- | --- |
+| GET | `/api/system` | Full system snapshot |
+| GET | `/api/triads` | Triad and dimension definitions |
+| GET/POST | `/api/rn` | List / create relational wholes |
+| DELETE | `/api/rn/:id` | Remove a relational whole |
+| POST | `/api/rn/:id/forward` · `/backward` · `/balance` | Run R1/R2 flows, restore balance |
+| GET/POST | `/api/pk` | List / create projections |
+| DELETE | `/api/pk/:id` | Remove a projection |
+| POST | `/api/pk/:id/flow` | Project units through a pipeline |
+| GET | `/api/balance-sheet` | Revenue vs expenditure comparison |
+| POST | `/api/cycle` | Process a full [3-6-9] cycle |
 
-I'm ready to push the complete Cosmos System interface with:
-- React + Vite setup
-- 4 main views (Dashboard, Rn Editor, Pk Editor, Visualizer)
-- D3.js visualization
-- Triadic architecture components
-- Full styling system
-- Backend server ready
-
-Please confirm and I'll create all the necessary files starting with `package.json`.
-
----
-
-Great! Now adding the core React components:
-
-Perfect! Let me continue building out the full interface. I'll create the remaining core files:Awaiting your confirmation to continue pushing the React components and styling files to complete the Cosmos System Interface.
-
-
+A WebSocket endpoint at `/ws` broadcasts system snapshots after every mutation.
