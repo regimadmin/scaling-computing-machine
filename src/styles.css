@@ -12,6 +12,8 @@
   --color-cerebral: #f5c542;
   --color-somatic: #7ec8e3;
   --color-autonomic: #40e0d0;
+  --color-integration: #b48ce0;
+  --color-environmental: #8bc56f;
   --radius: 10px;
   --shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
   --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -288,6 +290,126 @@ body {
   border-top: 1px solid var(--color-border);
   color: var(--color-text-muted);
   font-size: 0.8rem;
+}
+
+/* Pentachoral cells & staggered cycle */
+.phase-indicator {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.phase-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface-alt);
+  min-width: 84px;
+}
+
+.phase-step.rest {
+  border-style: dashed;
+}
+
+.phase-step.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.phase-step-index {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.phase-step-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.cells-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.cell-card {
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cell-card-active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.cell-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.cell-card h3 {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.cell-description {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}
+
+.cell-vertices {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.vertex-chip {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: inline-block;
+}
+
+.cell-omits {
+  margin-left: 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 0.74rem;
+}
+
+.cell-footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.5rem;
+}
+
+.cell-selector {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.cell-toggle.active {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
 }
 
 /* Dimensions */

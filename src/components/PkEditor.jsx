@@ -8,7 +8,7 @@ import { useSystemStore } from '../store/systemStore.js';
  * P2 (expenditure) columns are compared on the balance sheet.
  */
 export default function PkEditor() {
-  const triads = useSystemStore((state) => state.triads);
+  const vertices = useSystemStore((state) => state.vertices);
   const pkFlows = useSystemStore((state) => state.snapshot.pkFlows);
   const balanceSheet = useSystemStore((state) => state.snapshot.balanceSheet);
   const addPkFlow = useSystemStore((state) => state.addPkFlow);
@@ -93,10 +93,10 @@ export default function PkEditor() {
             </select>
           </label>
           <label>
-            Owning triad
+            Owning vertex
             <select value={form.triad} onChange={update('triad')}>
-              {Object.values(triads).map((t) => (
-                <option key={t.id} value={t.id}>{t.name}</option>
+              {Object.values(vertices).map((vertex) => (
+                <option key={vertex.id} value={vertex.id}>{vertex.label ?? vertex.name}</option>
               ))}
               <option value="cross">Cross-triad</option>
             </select>

@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { TriadicSystem, TRIADS, DIMENSIONS } from '../core/index.js';
+import { TriadicSystem, TRIADS, VERTICES, PENTACHORAL_DIMENSIONS } from '../core/index.js';
 
 /**
  * Zustand store wrapping the TriadicSystem core model. The mutable
@@ -12,9 +12,11 @@ const snapshot = () => system.snapshot();
 
 export const useSystemStore = create((set, get) => ({
   triads: TRIADS,
-  dimensions: DIMENSIONS,
+  vertices: VERTICES,
+  dimensions: PENTACHORAL_DIMENSIONS,
   snapshot: snapshot(),
   cycles: 0,
+  steps: 0,
   log: [],
 
   refresh() {
@@ -31,6 +33,17 @@ export const useSystemStore = create((set, get) => ({
     system.processCycle(energy);
     set((state) => ({ cycles: state.cycles + 1 }));
     get().appendLog(`Processed [3-6-9] cycle with energy ${energy}`);
+    get().refresh();
+  },
+
+  stepPentachoralCycle(energy = 1) {
+    const activation = system.stepCycle(energy);
+    set((state) => ({ steps: state.steps + 1 }));
+    get().appendLog(
+      activation.mode === 'rest'
+        ? `Step ${activation.step} (phase ${activation.phase}): rest — rebalanced ${activation.rebalanced} Rn circuits`
+        : `Step ${activation.step} (phase ${activation.phase}): activated cell ${activation.cellShort} ${activation.cellName} — ${activation.edges.length} edges, ${activation.projections.length} pipelines`,
+    );
     get().refresh();
   },
 
