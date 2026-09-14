@@ -1,14 +1,14 @@
 # Cosmos System Interface
 
 Interactive visualization and management interface for **Cosmos System Relational Wholes (Rn)** and **Projections (Pk)**, implementing part 1 of the plan from the
-[comprehensive Rn/Pk analysis](<COSMOS_SYSTEM_RN_PK_COMPLETE_ANALYSIS (1).md>).
+[comprehensive Rn/Pk analysis](<sources/COSMOS_SYSTEM_RN_PK_COMPLETE_ANALYSIS (1).md>).
 
 ## Concepts
 
 - **Relational Wholes (Rn)** — closed circuits with countercurrent balance: a forward flow (R1) from a subjective service through a **pivot** to an objective service, balanced by a backward feedback flow (R2). The pivot effects countercurrent balance (`|E_R1| ≈ |E_R2|`).
 - **Projections (Pk)** — open, unidirectional pipelines tracked as parallel accounting ledgers. P1 (revenue/input) and P2 (expenditure/output) pipelines feed a double-entry balance sheet; deficits trigger contingency mechanisms.
 - **Triadic architecture** — three concurrent processing streams mirroring the nervous system: **Cerebral** (Potential), **Somatic** (Commitment), **Autonomic** (Performance), integrated through the shared **P-5** processing core and cross-triad Rn flows (`R_CS`, `R_SA`, `R_AC`).
-- **Pentachoral structure (5-cell)** — the tetrahedral System 5 ([analysis §7](<COSMOS_SYSTEM_RN_PK_COMPLETE_ANALYSIS (1).md>)) extended to a 4-simplex: **5 vertices** (the three triads plus the explicit **Integration core** and **Environmental boundary**), **10 Rn edges** (the complete K5 graph), **10 triadic faces** and **5 tetrahedral cells** — each cell omits one vertex, forming a 4-of-5 complementarity thread. The original [3-6-9] loop survives as the C-S-A face.
+- **Pentachoral structure (5-cell)** — the tetrahedral System 5 ([analysis §7](<sources/COSMOS_SYSTEM_RN_PK_COMPLETE_ANALYSIS (1).md>)) extended to a 4-simplex: **5 vertices** (the three triads plus the explicit **Integration core** and **Environmental boundary**), **10 Rn edges** (the complete K5 graph), **10 triadic faces** and **5 tetrahedral cells** — each cell omits one vertex, forming a 4-of-5 complementarity thread. The original [3-6-9] loop survives as the C-S-A face.
 - **Staggered 5-step cycle** — per the [System 5 hierarchical timing model](SYSTEM5_HIERARCHICAL_DOCUMENTATION.md), each step `t` activates the cell assigned to `t mod 5` (phases 0–3 run a tensor-bundle cell's 6 Rn edges and its Pk pipelines; phase 4 is the rest/global-rebalance step).
 
 ## Features
