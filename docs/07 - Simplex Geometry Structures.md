@@ -517,7 +517,7 @@ The Rn and Pk flows can be understood as **edge traversals** and **face projecti
 
 ---
 
-# System 6 -> 6 x 8 x 8 = 48 x 8 = 384
+# System 6 -> 6 x 4^3 = 6 x 8^2 = 48 x 8 = 384
 
 # DNA 384 - COL2
 
