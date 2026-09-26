@@ -32,7 +32,7 @@ npm run build    # production build
 
 ## Project Structure
 
-```
+```text
 ├── index.html            # App entry page
 ├── main.jsx              # React bootstrap
 ├── server.js             # Express REST API + WebSocket snapshot broadcast
@@ -68,3 +68,14 @@ npm run build    # production build
 | POST | `/api/step` | Advance the staggered 5-step pentachoral cycle by one step |
 
 A WebSocket endpoint at `/ws` broadcasts system snapshots after every mutation.
+
+## Provisional T0–T9 specification work
+
+The source-derived T0–T9 terminology remains separate from the executable Rn/Pk model. The current consolidated deliverables are:
+
+- [Provisional T0–T9 term specification](<docs/13 - Provisional T0-T9 Term Specification.md>) — ten-family evidence model, twenty O/S variants, provenance, conflicts, and validation rules
+- [Immutable registry and read-only API plan](<docs/14 - Immutable T0-T9 Registry and Read-Only API Plan.md>) — TDD-first implementation sequence; no registry API is implemented yet
+- [Automated conflict-resolution analysis](<docs/15 - T0-T9 Conflict Resolution Analysis.md>) — seven conflict classes, dispositions, tests, and unresolved adjudications
+- [Twenty-term Passive and Active views](<docs/16 - Twenty-Term Passive and Active Views.md>) — generated top and side views with proposed `R_n`, `P_k`, and `V_i,j` visual grammar
+
+These documents do not map conceptual terms or diagram relations to the current runtime constants. Any such adapter requires a separate approved behavioral specification and tests.
