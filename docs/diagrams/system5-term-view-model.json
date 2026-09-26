@@ -1,0 +1,200 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "provisional-view-model",
+  "scope": "Terminology visualization only; not executable behavior",
+  "provenance": {
+    "sources": [
+      {
+        "sourceId": "SRC-TERM-SPEC",
+        "sourceFile": "docs/13 - Provisional T0-T9 Term Specification.md",
+        "location": "Consolidated registry and normative evidence matrix",
+        "sourceLayer": "consolidated-provisional-specification"
+      },
+      {
+        "sourceId": "SRC-CONFLICT-ANALYSIS",
+        "sourceFile": "docs/15 - T0-T9 Conflict Resolution Analysis.md",
+        "location": "C-007 and diagram constraints",
+        "sourceLayer": "automated-evidence-synthesis"
+      },
+      {
+        "sourceId": "SRC-T9-HIERARCHY",
+        "sourceFile": "extracted/t-9-primary-universal-term/t-9-primary-universal-term.md",
+        "location": "Editorial guide and Page 1",
+        "sourceLayer": "curated-source-extraction"
+      },
+      {
+        "sourceId": "SRC-T1-3-VIRTUAL",
+        "sourceFile": "extracted/t1-3-virtual-image-triad-system-5-bob-re-back-in-thailand/t1-3-virtual-image-triad-system-5-bob-re-back-in-thailand.md",
+        "location": "Accepted Page 1 and Page 2 diagrams",
+        "sourceLayer": "curated-source-extraction"
+      }
+    ],
+    "evidence": [
+      {
+        "evidenceId": "E-REGISTRY-FAMILIES",
+        "sourceId": "SRC-TERM-SPEC",
+        "claim": "Ten provisional families with separate objective and subjective variants",
+        "confidence": "medium"
+      },
+      {
+        "evidenceId": "E-VIEW-GRAMMAR",
+        "sourceId": "SRC-CONFLICT-ANALYSIS",
+        "claim": "R_n, P_k, and V_i,j are proposed visualization grammar and not runtime identifiers",
+        "confidence": "high"
+      },
+      {
+        "evidenceId": "E-INTERFACE-HIERARCHY",
+        "sourceId": "SRC-T9-HIERARCHY",
+        "claim": "Five labelled conceptual interfaces in nested and sequential source views",
+        "confidence": "high"
+      },
+      {
+        "evidenceId": "E-VIRTUAL-IMAGE-TRIAD",
+        "sourceId": "SRC-T1-3-VIRTUAL",
+        "claim": "Coalesced interfaces 1 and 2 plus accepted closed 3,4,5 triad with source I_i,j regions",
+        "confidence": "high"
+      }
+    ]
+  },
+  "families": [
+    {
+      "termId": "T0",
+      "name": "Unknown",
+      "variants": {
+        "subjective": { "token": "T0S", "numberedCrossReferences": [] },
+        "objective": { "token": "T0O", "numberedCrossReferences": [] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T1",
+      "name": "Need Perception",
+      "variants": {
+        "subjective": { "token": "T1S", "numberedCrossReferences": ["T01", "T02", "T0-1"] },
+        "objective": { "token": "T1O", "numberedCrossReferences": ["T12", "T1-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T2",
+      "name": "Idea Creation",
+      "variants": {
+        "subjective": { "token": "T2S", "numberedCrossReferences": ["T02", "T1-2"] },
+        "objective": { "token": "T2O", "numberedCrossReferences": ["T13", "T2-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T3",
+      "name": "Idea Transfer",
+      "variants": {
+        "subjective": { "token": "T3S", "numberedCrossReferences": ["T03", "T1-3"] },
+        "objective": { "token": "T3O", "numberedCrossReferences": ["T14", "T3-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T4",
+      "name": "Organized Input",
+      "variants": {
+        "subjective": { "token": "T4S", "numberedCrossReferences": ["T04", "T1-4"] },
+        "objective": { "token": "T4O", "numberedCrossReferences": ["T15", "T4-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T5",
+      "name": "Physical Action",
+      "variants": {
+        "subjective": { "token": "T5S", "numberedCrossReferences": ["T06", "T1-5"] },
+        "objective": { "token": "T5O", "numberedCrossReferences": ["T16", "T5-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T6",
+      "name": "Corporeal Body",
+      "variants": {
+        "subjective": { "token": "T6S", "numberedCrossReferences": ["T08", "T1-6"] },
+        "objective": { "token": "T6O", "numberedCrossReferences": ["T17", "T6-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T7",
+      "name": "Quantized Memory",
+      "variants": {
+        "subjective": { "token": "T7S", "numberedCrossReferences": ["T09", "T1-7"] },
+        "objective": { "token": "T7O", "numberedCrossReferences": ["T18", "T7-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T8",
+      "name": "Balanced Response",
+      "variants": {
+        "subjective": { "token": "T8S", "numberedCrossReferences": ["T10", "T1-8"] },
+        "objective": { "token": "T8O", "numberedCrossReferences": ["T19", "T8-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    },
+    {
+      "termId": "T9",
+      "name": "Universal Discretion",
+      "variants": {
+        "subjective": { "token": "T9S", "numberedCrossReferences": ["T11", "T1-9"] },
+        "objective": { "token": "T9O", "numberedCrossReferences": ["T20", "T9-1"] }
+      },
+      "evidenceIds": ["E-REGISTRY-FAMILIES"],
+      "runtimeMappings": []
+    }
+  ],
+  "relations": {
+    "cyclic": {
+      "notation": "R_n",
+      "status": "proposed-view-grammar",
+      "evidenceIds": ["E-VIEW-GRAMMAR"]
+    },
+    "projection": {
+      "notation": "P_k",
+      "status": "proposed-view-grammar",
+      "evidenceIds": ["E-VIEW-GRAMMAR"]
+    },
+    "virtualImages": [
+      { "notation": "V_3,4", "sourceNotation": "I_3,4", "interfaces": [3, 4], "status": "proposed-notation-for-source-attested-pair", "evidenceIds": ["E-VIEW-GRAMMAR", "E-VIRTUAL-IMAGE-TRIAD"] },
+      { "notation": "V_4,5", "sourceNotation": "I_4,5", "interfaces": [4, 5], "status": "proposed-notation-for-source-attested-pair", "evidenceIds": ["E-VIEW-GRAMMAR", "E-VIRTUAL-IMAGE-TRIAD"] },
+      { "notation": "V_3,5", "sourceNotation": "I_3,5", "interfaces": [3, 5], "status": "proposed-notation-for-source-attested-pair", "evidenceIds": ["E-VIEW-GRAMMAR", "E-VIRTUAL-IMAGE-TRIAD"] }
+    ]
+  },
+  "interfaces": [
+    { "id": 1, "name": "Host Idea", "evidenceIds": ["E-INTERFACE-HIERARCHY"] },
+    { "id": 2, "name": "Conscious Knowledge", "evidenceIds": ["E-INTERFACE-HIERARCHY"] },
+    { "id": 3, "name": "Emotional Knowledge", "evidenceIds": ["E-INTERFACE-HIERARCHY", "E-VIRTUAL-IMAGE-TRIAD"] },
+    { "id": 4, "name": "Routines", "evidenceIds": ["E-INTERFACE-HIERARCHY", "E-VIRTUAL-IMAGE-TRIAD"] },
+    { "id": 5, "name": "Behavioral Form", "evidenceIds": ["E-INTERFACE-HIERARCHY", "E-VIRTUAL-IMAGE-TRIAD"] }
+  ],
+  "views": {
+    "passive": {
+      "orientation": "top",
+      "purpose": "Structural incidence and objective/subjective correspondence",
+      "behaviorDefined": false,
+      "evidenceIds": ["E-VIEW-GRAMMAR"]
+    },
+    "active": {
+      "orientation": "side",
+      "purpose": "Ordered projection and hierarchical context",
+      "behaviorDefined": false,
+      "evidenceIds": ["E-VIEW-GRAMMAR"]
+    }
+  },
+  "conflictIds": ["C-001", "C-002", "C-003", "C-004", "C-005", "C-006", "C-007"]
+}

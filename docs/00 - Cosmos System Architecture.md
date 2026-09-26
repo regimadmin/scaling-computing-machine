@@ -2,7 +2,20 @@
 
 ---
 
-## Relational Wholes (Rn) & Projections (Pk) 
+## Current terminology and implementation contracts
+
+The current JavaScript runtime is defined by `src/core/`, `server.js`, and executable tests. The provisional T0–T9 terminology is a separate evidence model and has no implicit mapping to runtime Rn, Pk, service, cell, or cycle identifiers.
+
+- [Provisional T0–T9 term specification](<13 - Provisional T0-T9 Term Specification.md>)
+- [Immutable T0–T9 registry and read-only API plan](<14 - Immutable T0-T9 Registry and Read-Only API Plan.md>)
+- [T0–T9 conflict-resolution analysis](<15 - T0-T9 Conflict Resolution Analysis.md>)
+- [Twenty-term Passive and Active views](<16 - Twenty-Term Passive and Active Views.md>)
+
+The diagram notation `R_n`, `P_k`, and `V_i,j` in the twenty-term views is proposed visualization grammar, not an executable runtime mapping.
+
+---
+
+## Relational Wholes (Rn) & Projections (Pk)
 
 This document provides a comprehensive analysis of **Relational Wholes (Rn)** and **Projections (Pk)** as they flow between **active interfaces** in the cosmos system architecture.
 The analysis is based on Robert Campbell's "Fisherman's Guide to the Cosmic Order," the cosmos-system-5 implementation, and domain-specific applications across neural networks, business organizations, reservoir computing, cellular biology, and integumentary systems.
@@ -23,24 +36,17 @@ The analysis is based on Robert Campbell's "Fisherman's Guide to the Cosmic Orde
 
 ## Table of Contents
 
-1. [Foundational Concepts](#1-foundational-concepts)
-2. [Active Interfaces (Centers)](#2-active-interfaces-centers)
-3. [Relational Wholes (Rn): Detailed Analysis](#3-relational-wholes-rn-detailed-analysis)
-4. [Projections (Pk): Detailed Analysis](#4-projections-pk-detailed-analysis)
-5. [System Architecture: Nested Tuples](#5-system-architecture-nested-tuples)
-6. [Dimensional Flow Mappings](#6-dimensional-flow-mappings)
-7. [Simplex Geometry Structures](#7-simplex-geometry-structures)
-  7.1. [Monohedral Structure](#7_1-monohedral-structure)
-  7.2. [Dihedral Structure](#7_2-dihedral-structure)
-  7.3. [Trihedral Structure](#7_3-trigonal-structure)
-  7.4. [Tetrahedral Structure](#7_4-tetrahedral-structure)
-  7.5. [Pentachoral Structure](#7_5-pentahedral-structure)
-  7.6. [Hexahedral Structure](#7_6-hexahedral-structure)
-  7.7. [Heptahedral Structure](#7_7-heptahedral-structure)
-8. [Implementation Patterns](#8-implementation-patterns)
-9. [Domain-Specific Applications](#9-domain-specific-applications)
-10. [Visual Diagrams](#10-visual-diagrams)
-11. [Conclusion](#11-conclusion)
-12. [References](#references)
+- [Foundational Concepts](<01 - Foundational Concepts.md>)
+- [Active Interfaces](<02 - Active Interfaces (Centers).md>)
+- [Relational Wholes](<03 - Relational Wholes (Rn).md>)
+- [Projections](<04 - Projections (Pk).md>)
+- [System Architecture](<05 - System Architecture (Nested Tuples).md>)
+- [Dimensional Flow Mappings](<06 -  Dimensional Flow Mappings.md>)
+- [Simplex Geometry Structures](<07 - Simplex Geometry Structures.md>)
+- [Implementation Patterns](<08 - Implementation Patterns.md>)
+- [Domain-Specific Applications](<09 -  Domain-Specific Applications.md>)
+- [Visual Diagrams](<10 - Visual Diagrams.md>)
+- [Conclusion](<11 - Conclusion.md>)
+- [References](<12 - References>)
 
 ---

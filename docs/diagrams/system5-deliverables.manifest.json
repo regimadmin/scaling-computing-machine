@@ -1,0 +1,48 @@
+{
+  "check_local_links": true,
+  "files": [
+    {
+      "path": "README.md",
+      "required_headings": ["## Provisional T0–T9 specification work"],
+      "required_literals": ["docs/13 - Provisional T0-T9 Term Specification.md", "docs/14 - Immutable T0-T9 Registry and Read-Only API Plan.md", "docs/15 - T0-T9 Conflict Resolution Analysis.md", "docs/16 - Twenty-Term Passive and Active Views.md"]
+    },
+    {
+      "path": "docs/00 - Cosmos System Architecture.md",
+      "required_headings": ["# Cosmos System Architecture", "## Current terminology and implementation contracts", "## Table of Contents"],
+      "required_literals": ["13 - Provisional T0-T9 Term Specification.md", "16 - Twenty-Term Passive and Active Views.md", "not an executable runtime mapping"]
+    },
+    {
+      "path": "docs/10 - Visual Diagrams.md",
+      "required_headings": ["# Visual diagrams", "## Provisional twenty-term views"],
+      "required_literals": ["images/system5-passive-top-view.svg", "images/system5-active-side-view.svg", "do not define executable relations"]
+    },
+    {
+      "path": "docs/13 - Provisional T0-T9 Term Specification.md",
+      "required_headings": ["# Provisional T0–T9 term specification", "### Consolidated registry", "### Conflict register", "## Proposed implementation contract"],
+      "required_literals": ["C-001", "C-007", "runtimeMappings", "sys5-term:T0", "sys5-term:T9"]
+    },
+    {
+      "path": "docs/14 - Immutable T0-T9 Registry and Read-Only API Plan.md",
+      "required_headings": ["# Immutable T0–T9 registry and read-only API implementation plan", "## Read-only HTTP API", "## Delivery phases", "## Acceptance gates"],
+      "required_literals": ["SOURCE_TOKEN_INDEX", "deeply frozen", "unresolved-pending-adjudication", "405", "runtimeMappings"]
+    },
+    {
+      "path": "docs/15 - T0-T9 Conflict Resolution Analysis.md",
+      "required_headings": ["# T0–T9 conflict-resolution analysis", "## Resolution matrix", "## Cross-conflict registry rules", "## Runtime boundary"],
+      "required_literals": ["C-001", "C-002", "C-003", "C-004", "C-005", "C-006", "C-007", "unresolved-pending-adjudication"]
+    },
+    {
+      "path": "docs/16 - Twenty-Term Passive and Active Views.md",
+      "required_headings": ["# Twenty-term Passive and Active views", "## Passive (Top view)", "## Active (Side view)", "## Source and proposal boundary"],
+      "required_literals": ["R_n", "P_k", "V_i,j", "system5-term-view-model.json", "no passive-to-active transition"]
+    },
+    {
+      "path": "docs/diagrams/system5-term-view-model.json",
+      "required_literals": ["provisional-view-model", "proposed-view-grammar", "V_3,4", "V_4,5", "V_3,5", "runtimeMappings", "E-REGISTRY-FAMILIES", "E-VIRTUAL-IMAGE-TRIAD"]
+    },
+    {
+      "path": "scripts/generate-system5-term-views.py",
+      "required_literals": ["expected 20 variants", "diagram model must not contain runtime mappings", "system5-passive-top-view", "system5-active-side-view"]
+    }
+  ]
+}

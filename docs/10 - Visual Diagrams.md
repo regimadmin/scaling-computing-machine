@@ -1,10 +1,19 @@
-## 10. Visual Diagrams
+# Visual diagrams
 
-### 10.1 Comprehensive Rn & Pk Flow Diagram
+## Provisional twenty-term views
 
-![Rn and Pk Flows](rn-pk-flows.png)
+The [twenty-term Passive and Active views](<16 - Twenty-Term Passive and Active Views.md>) present the provisional T0–T9 family registry in two source-controlled visual orientations:
 
-The diagram above illustrates the complete flow patterns for Relational Wholes (Rn) and Projections (Pk) across Systems 2, 3, 4, and 5.
+- [Passive (Top view)](images/system5-passive-top-view.svg)
+- [Active (Side view)](images/system5-active-side-view.svg)
+
+Their `R_n`, `P_k`, and `V_i,j` labels are proposed visualization grammar. They do not define executable relations or map to current runtime identifiers.
+
+## Comprehensive Rn & Pk flow diagram
+
+> **Historical source note:** The earlier `rn-pk-flows.png` artifact is not tracked in this repository. The description below is retained as source commentary, not as a verified current diagram.
+
+The missing historical diagram was described as illustrating flow patterns for Relational Wholes (Rn) and Projections (Pk) across Systems 2, 3, 4, and 5.
 
 **Key Features:**
 
@@ -22,7 +31,7 @@ The diagram above illustrates the complete flow patterns for Relational Wholes (
 - **Solid arrows**: Relational wholes (Rn) - closed circuits
 - **Dashed arrows**: Projections (Pk) - open paths
 
-### 10.2 System-5-CNS-ORG Diagram
+## System-5-CNS-ORG diagram
 
 The System-5-CNS-ORG diagram (from cosmos-system-5 repository) shows the **Company & Nervous System Integration** with three main triads arranged in a tetrahedral structure.
 
