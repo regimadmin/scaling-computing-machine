@@ -10,8 +10,9 @@ The current JavaScript runtime is defined by `src/core/`, `server.js`, and execu
 - [Immutable T0–T9 registry and read-only API plan](<14 - Immutable T0-T9 Registry and Read-Only API Plan.md>)
 - [T0–T9 conflict-resolution analysis](<15 - T0-T9 Conflict Resolution Analysis.md>)
 - [Twenty-term Passive and Active views](<16 - Twenty-Term Passive and Active Views.md>)
+- [Term R_n, P_k, and I_i,j technical documentation](<17 - Term Rn Pk Iij Technical Documentation.md>)
 
-The diagram notation `R_n`, `P_k`, and `V_i,j` in the twenty-term views is proposed visualization grammar, not an executable runtime mapping.
+The diagram notation `R_n`, `P_k`, and `V_i,j` in the twenty-term views is proposed visualization grammar, not an executable runtime mapping. The per-term `R_n`, `P_k`, and `I_i,j` technical documentation is likewise interpretive and carries no runtime mapping.
 
 ---
 

@@ -43,6 +43,19 @@
     {
       "path": "scripts/generate-system5-term-views.py",
       "required_literals": ["expected 20 variants", "diagram model must not contain runtime mappings", "system5-passive-top-view", "system5-active-side-view"]
+    },
+    {
+      "path": "docs/17 - Term Rn Pk Iij Technical Documentation.md",
+      "required_headings": ["# Term R_n, P_k, and I_i,j technical documentation", "## Open questions"],
+      "required_literals": ["R_n", "P_k", "I_3,4", "I_4,5", "I_3,5", "system5-term-relation-model.json", "OQ-001", "OQ-002"]
+    },
+    {
+      "path": "docs/diagrams/system5-term-relation-model.json",
+      "required_literals": ["proposed-interpretive-model", "I_i,j", "runtimeMappings", "E-RN-DEFINITION", "E-T8-ACCOUNTING", "E-VIRTUAL-IMAGE-COUNT"]
+    },
+    {
+      "path": "scripts/generate-system5-term-relation-diagrams.py",
+      "required_literals": ["expected 20 terms", "must not contain runtime mappings", "system5-rn-pk-iij"]
     }
   ]
 }
