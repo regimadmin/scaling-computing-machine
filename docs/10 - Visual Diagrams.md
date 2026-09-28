@@ -9,6 +9,16 @@ The [twenty-term Passive and Active views](<16 - Twenty-Term Passive and Active 
 
 Their `R_n`, `P_k`, and `V_i,j` labels are proposed visualization grammar. They do not define executable relations or map to current runtime identifiers.
 
+## Per-term relation atlas
+
+The [Term R_n, P_k, and I_i,j technical documentation](<17 - Term Rn Pk Iij Technical Documentation.md>) documents each of the twenty System 5 Terms' cyclic relations, linear projections, and virtual images, with generated atlas sheets:
+
+- [Subjective (autonomic) series atlas](images/system5-rn-pk-iij-subjective-terms.svg)
+- [Objective (somatic) series atlas](images/system5-rn-pk-iij-objective-terms.svg)
+- [Universal (transjective) transfer atlas](images/system5-rn-pk-iij-universal-terms.svg)
+
+The atlas grammar is interpretive documentation of the source descriptions. It does not define executable relations or map to current runtime identifiers.
+
 ## Comprehensive Rn & Pk flow diagram
 
 > **Historical source note:** The earlier `rn-pk-flows.png` artifact is not tracked in this repository. The description below is retained as source commentary, not as a verified current diagram.

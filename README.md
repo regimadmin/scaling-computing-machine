@@ -77,5 +77,6 @@ The source-derived T0–T9 terminology remains separate from the executable Rn/P
 - [Immutable registry and read-only API plan](<docs/14 - Immutable T0-T9 Registry and Read-Only API Plan.md>) — TDD-first implementation sequence; no registry API is implemented yet
 - [Automated conflict-resolution analysis](<docs/15 - T0-T9 Conflict Resolution Analysis.md>) — seven conflict classes, dispositions, tests, and unresolved adjudications
 - [Twenty-term Passive and Active views](<docs/16 - Twenty-Term Passive and Active Views.md>) — generated top and side views with proposed `R_n`, `P_k`, and `V_i,j` visual grammar
+- [Term R_n, P_k, and I_i,j technical documentation](<docs/17 - Term Rn Pk Iij Technical Documentation.md>) — per-term cyclic relations, linear projections, and virtual images for all twenty System 5 Terms, with per-term diagrams and generated atlas sheets
 
 These documents do not map conceptual terms or diagram relations to the current runtime constants. Any such adapter requires a separate approved behavioral specification and tests.
